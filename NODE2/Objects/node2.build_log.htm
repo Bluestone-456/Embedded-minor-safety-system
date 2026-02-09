@@ -1,0 +1,108 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hji iammahi, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.41.0.0
+Toolchain Path:  C:\Users\iamma\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.22
+Assembler:       Armasm.exe V6.22
+Linker/Locator:  ArmLink.exe V6.22
+Library Manager: ArmAr.exe V6.22
+Hex Converter:   FromElf.exe V6.22
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\NODE2\node2.uvprojx
+Project File Date:  11/28/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.22', folder: 'C:\Users\iamma\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target_1'
+compiling fonts.c...
+assembling startup_stm32f407xx.s...
+compiling ssd1306.c...
+compiling system_stm32f4xx.c...
+main.c(70): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+   70 |                 sprintf(buf, "Lvl: %lu", rem_Gas);
+      |                                    ~~~   ^~~~~~~
+      |                                    %u
+main.c(74): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+   74 |                 sprintf(buf, "Vol: %lu", rem_Sound);
+      |                                    ~~~   ^~~~~~~~~
+      |                                    %u
+main.c(91): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+   91 |             sprintf(buf, "Gas: %lu", rem_Gas);
+      |                                ~~~   ^~~~~~~
+      |                                %u
+main.c(94): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+   94 |             sprintf(buf, "Snd: %lu", rem_Sound);
+      |                                ~~~   ^~~~~~~~~
+      |                                %u
+main.c(118): warning: format specifies type 'unsigned long *' but the argument has type 'volatile uint32_t *' (aka 'volatile unsigned int *') [-Wformat]
+  117 |     sscanf(rxBuffer, "%f,%f,%lu,%lu,%hhu", 
+      |                             ~~~
+      |                             %u
+  118 |            &rem_Temp, &rem_Press, &rem_Gas, &rem_Sound, &rem_Vibration);
+      |                                   ^~~~~~~~
+main.c(118): warning: format specifies type 'unsigned long *' but the argument has type 'volatile uint32_t *' (aka 'volatile unsigned int *') [-Wformat]
+  117 |     sscanf(rxBuffer, "%f,%f,%lu,%lu,%hhu", 
+      |                                 ~~~
+      |                                 %u
+  118 |            &rem_Temp, &rem_Press, &rem_Gas, &rem_Sound, &rem_Vibration);
+      |                                             ^~~~~~~~~~
+main.c(167): warning: while loop has empty body [-Wempty-body]
+  167 |     I2C1->DR = addr; while (!(I2C1->SR1 & I2C_SR1_ADDR)); (void)I2C1->SR2;
+      |                                                         ^
+main.c(167): note: put the semicolon on a separate line to silence this warning
+main.c(170): warning: while loop has empty body [-Wempty-body]
+  170 |     while (!(I2C1->SR1 & I2C_SR1_BTF)); I2C1->CR1 |= I2C_CR1_STOP;
+      |                                       ^
+main.c(170): note: put the semicolon on a separate line to silence this warning
+8 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=10160 RO-data=5944 RW-data=0 ZI-data=2184  
+".\Objects\node2.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/iamma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+  C:/Users/iamma/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
