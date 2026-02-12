@@ -37,9 +37,10 @@ The system uses a **dual-node STM32 architecture**, where a **sensor node** acqu
 | Sensor | Interface | Purpose |
 |------|----------|--------|
 | MQ-series Gas Sensor | ADC | Detects hazardous gases such as methane and carbon monoxide |
-| BMP280 | I2C | Monitors air pressure to detect ventilation or structural anomalies and temperature for heat or fire hazards |
+| BMP280 | SPI | Monitors air pressure to detect ventilation or structural anomalies and temperature for heat or fire hazards |
 | LM393 Sound Sensor | ADC | Detects abnormal noise (falling rocks, machinery faults) |
 | Vibration Sensor | GPIO | Detects ground tremors or equipment instability |
+| 0.96 inch OLED Dislay| I2C | Display the sensors detected environmental stats with warnings |
 
 Together, these sensors provide a **multi-layered safety monitoring system** suitable for harsh underground environments.
 
